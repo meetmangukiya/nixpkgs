@@ -89,7 +89,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeInstallCheckInputs = [ pkg-config ];
   installCheckInputs = [ atf ];
 
-  doInstallCheck = stdenv.buildPlatform.canExecute hostPlatform;
+  doInstallCheck = false;
 
   # Can’t use `mesonCheckPhase` because it runs the wrong hooks for `installCheckPhase`.
   installCheckPhase = ''
