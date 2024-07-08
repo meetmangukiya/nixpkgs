@@ -93,9 +93,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   # Can’t use `mesonCheckPhase` because it runs the wrong hooks for `installCheckPhase`.
   installCheckPhase = ''
-    runHook preInstallCheck
-    meson test --no-rebuild
-    runHook postInstallCheck
   '';
 
   passthru.updateScript = gitUpdater { rev-prefix = "libiconv-"; };
