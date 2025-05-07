@@ -11,7 +11,7 @@
 
 let
   pname = "qsv";
-  version = "2.2.1";
+  version = "4.0.0";
 in
 rustPlatform.buildRustPackage {
   inherit pname version;
